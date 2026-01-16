@@ -2,10 +2,7 @@ from django.db import models
 
 
 class Product(models.Model):
-    """
-    Main product fields shared by all products
-    Example product given: https://www.pvcfittingsonline.com/collections/pvc-gate-valves/products/2-pvc-socket-gate-valve-spears-2022-020
-    """
+    """Main product fields shared by all products"""
     name = models.CharField(max_length=500)
     sku = models.CharField(max_length=100, unique=True)
     description = models.TextField()
