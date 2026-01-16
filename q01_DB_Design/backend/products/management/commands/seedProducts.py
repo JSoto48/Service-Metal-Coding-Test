@@ -22,7 +22,6 @@ class Command(BaseCommand):
             stock_quantity=25,
         )
         
-        # Add images for gate valve
         ProductImage.objects.create(
             product=gate_valve,
             image_url='https://www.pvcfittingsonline.com/cdn/shop/files/spearsthreadedvalve_5.jpg?v=1747959277&width=1500',
@@ -30,8 +29,7 @@ class Command(BaseCommand):
             is_primary=True,
             display_order=0
         )
-        
-        # Add specifications for gate valve
+
         specs_gate = [
             ('Material', 'PVC'),
             ('O-rings', 'EPDM'),
@@ -46,39 +44,6 @@ class Command(BaseCommand):
                 spec_value=spec_value
             )
         
-        # Example product 2: Ball Valve
-        # ball_valve = Product.objects.create(
-        #     name='1-1/2" PVC True Union Ball Valve',
-        #     sku='BV-150-TU',
-        #     brand='GF Piping Systems',
-        #     main_category='Valves',
-        #     subcategory='Ball Valves',
-        #     price=67.89,
-        #     stock_quantity=15,
-        #     description='True union ball valve with full port design for maximum flow.'
-        # )
-        
-        # ProductImage.objects.create(
-        #     product=ball_valve,
-        #     image_url='https://example.com/ball-valve.jpg',
-        #     alt_text='1.5 inch ball valve',
-        #     is_primary=True,
-        #     display_order=0
-        # )
-        
-        # specs_ball = [
-        #     ('Size', '1-1/2 inch'),
-        #     ('Material', 'PVC'),
-        #     ('Port Type', 'Full Port'),
-        #     ('Max Pressure', '150 PSI'),
-        #     ('Handle Type', 'Lever'),
-        # ]
-        # for spec_name, spec_value in specs_ball:
-        #     ProductSpecs.objects.create(
-        #         product=ball_valve,
-        #         spec_name=spec_name,
-        #         spec_value=spec_value
-        #     )
         
         
         self.stdout.write(self.style.SUCCESS(f'Successfully created {Product.objects.count()} products'))
