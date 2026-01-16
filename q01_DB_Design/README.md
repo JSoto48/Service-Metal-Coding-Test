@@ -95,16 +95,25 @@ Used `stock_quantity` (integer) paired with an `updated_at` field to monitor inv
 
 ## Testing
 #### 1. Install requirements
-Create venv if you want, I just used common django libraries.
+```bash
+cd q01_DB_Design
 pip install -r requirements.txt
+```
 
 #### 2. Create a superuser
-Models are registered in the admin panel, create a superuser to view them.
+```bash
+cd backend
+python manage.py createsuperuser
+```
 
 #### 3. Run seed command to populate DB entries
+```bash
 python manage.py seedProducts
+```
 
 #### 4. Navigate to admin panel
+```bash
 python manage.py runserver
-http://127.0.0.1:8000/admin/
+```
+Visit: http://127.0.0.1:8000/admin/
 
