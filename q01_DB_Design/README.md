@@ -101,18 +101,23 @@ cd q01_DB_Design
 pip install -r requirements.txt
 ```
 
-#### 2. Create a superuser
+#### 2. Migrate
 ```bash
 cd backend
+python manage.py migrate
+```
+
+#### 3. Create a superuser
+```bash
 python manage.py createsuperuser
 ```
 
-#### 3. Run seed command to populate DB entries
+#### 4. Run seed command to populate DB entries
 ```bash
 python manage.py seedProducts
 ```
 
-#### 4. Navigate to admin panel
+#### 5. Navigate to admin panel
 ```bash
 python manage.py runserver
 Visit: http://127.0.0.1:8000/admin/
